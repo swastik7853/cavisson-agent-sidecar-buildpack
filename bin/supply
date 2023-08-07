@@ -8,11 +8,10 @@ DEPS_DIR=$3
 DEPS_IDX=$4
 
 echo "Printing argument values.."
-export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
-BUILDPACK_DIR1=$(dirname `dirname $0`)
+BUILDPACK_DIR=$(dirname `dirname $0`)
 
-echo "BUild dir: $BUILDPACK_DIR"
-echo "BUild dir1 : $BUILDPACK_DIR1"
+#echo "BUild dir: $BUILDPACK_DIR"
+#echo "BUild dir1 : $BUILDPACK_DIR1"
 #echo $1
 #echo $2
 #echo $3
@@ -26,5 +25,5 @@ echo "-----> Running sidecar supply"
  
 echo "-----> Creating CavissonAgent as sidecar"
 mkdir "$DEPS_DIR"/netdiagnostics
-tar -xzf /tmp/buildpack*/*/bin/netdiagnostics.4.11.0.72.tar.gz -C "$DEPS_DIR"/netdiagnostics/
+tar -xzf $BUILDPACK_DIR/bin/netdiagnostics.4.11.0.72.tar.gz -C "$DEPS_DIR"/netdiagnostics/
 echo "-----> Completed deployment of CavissonAgent as sidecar"
