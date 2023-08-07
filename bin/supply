@@ -7,7 +7,7 @@ CACHE_DIR=$2
 DEPS_DIR=$3
 DEPS_IDX=$4
 
-echo "Printing argument values.."
+#echo "Printing argument values.."
 BUILDPACK_DIR=$(dirname `dirname $0`)
 
 #echo "BUild dir: $BUILDPACK_DIR"
