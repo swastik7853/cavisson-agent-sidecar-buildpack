@@ -9,6 +9,7 @@ DEPS_IDX=$4
 
 echo "-----> Running sidecar supply"
 ls -ltr /tmp/buildpacks/*/
+ls -ltr /tmp/buildpacks/*/bin
 echo "-----> Creating CavissonAgent as sidecar"
 mkdir "$DEPS_DIR"/netdiagnostics
 tar -xzf /tmp/buildpacks/*/bin/netdiagnostics.4.11.0.72.tar.gz -C "$DEPS_DIR"/netdiagnostics/
