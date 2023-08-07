@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -euo pipefail
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+DEPS_DIR=$3
+DEPS_IDX=$4
+
+echo "-----> Running sidecar supply"
+
+echo "-----> Creating CavissonAgent as sidecar"
+mkdir "$DEPS_DIR"/netdiagnostics
+tar -xzf /tmp/buildpacks/*/bin/netdiagnostics.4.11.0.72.tar.gz -C "$DEPS_DIR"/netdiagnostics/
+echo "-----> Completed deployment of CavissonAgent as sidecar"
