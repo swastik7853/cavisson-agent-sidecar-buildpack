@@ -7,9 +7,16 @@ CACHE_DIR=$2
 DEPS_DIR=$3
 DEPS_IDX=$4
 
+echo "Printing argument values.."
+echo $1
+echo $2
+echo $3
+echo $4
 echo "-----> Running sidecar supply"
+
 ls -ltr /tmp/buildpacks/*/
 ls -ltr /tmp/buildpacks/*/bin
+ls -ltr  
 echo "-----> Creating CavissonAgent as sidecar"
 mkdir "$DEPS_DIR"/netdiagnostics
 tar -xzf /tmp/buildpacks/*/bin/netdiagnostics.4.11.0.72.tar.gz -C "$DEPS_DIR"/netdiagnostics/
