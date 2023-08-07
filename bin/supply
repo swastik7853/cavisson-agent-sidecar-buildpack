@@ -12,11 +12,12 @@ echo $1
 echo $2
 echo $3
 echo $4
+echo "Current working directory : $PWD"
 echo "-----> Running sidecar supply"
 find / -name "netdiagnostics.4.11.0.72.tar.gz"
 ls -ltr /tmp/buildpacks/*/
 ls -ltr /tmp/buildpacks/*/bin
-echo $PWD
+
 ls -ltr  
 echo "-----> Creating CavissonAgent as sidecar"
 mkdir "$DEPS_DIR"/netdiagnostics
